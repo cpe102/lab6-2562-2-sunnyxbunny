@@ -2,10 +2,25 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+	
+	if(x>'Z'||x<'A'){
+		x='0';
+		}else{
+			x=x-1;
+			if(x<'A'){
+				x='Z';
+			}else{
+				x=x;
+			}
+	}
+	
+	return x;
 }
 
+
 int main(){
+	
+	
 	//Test Case
 	cout << before('A') << "\n";
 	cout << before('B') << "\n";
@@ -17,3 +32,7 @@ int main(){
 	cout << before('c') << "\n";
 	return 0;
 }
+
+
+//A=65,a=97
+//want +25
